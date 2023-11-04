@@ -32,11 +32,12 @@ prelude:
   kernel-5.10/macaroni-lts-sources &&
   luet miner ri virtual/base &&
   luet cleanup --purge-repos &&
+  eval 'mkdir /tmp || true' &&
+  chmod a+rwx /tmp &&
   eselect kernel set 1 &&
   /usr/bin/gcc-config 1 &&
   source /etc/profile &&
   eselect gcc set 1 &&
-  eselect binutils set 1 &&
   mkdir -p /var/lib/portage &&
   whip hook eclass_db.db_fix_so &&
   whip hook perl.postinst &&
