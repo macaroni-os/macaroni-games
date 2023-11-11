@@ -1,0 +1,23 @@
+prelude:
+- >-
+  export LUET_YES=true &&
+  export LUET_NOLOCK=true &&
+  luet repo update &&
+  luet i
+  toolchain/desktop2
+  toolchain/base-video
+  toolchain/base-audio
+  toolchain/base-gtk
+  toolchain/base-gtk2
+  toolchain/base-qt
+  toolchain/base-qt2
+  toolchain/base-gnome
+  toolchain/base-gnome2
+  toolchain/base-multimedia3 &&
+  luet cleanup --purge-repos &&
+  build-docbook-catalog &&
+  macaronictl env-update
+requires:
+- category: "seed"
+  name: "macaroni-phoenix-base"
+  version: ">=0"
