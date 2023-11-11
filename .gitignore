@@ -1,0 +1,5 @@
+*.swp
+*.swo
+*.anise-idx.json
+kit_cache/
+build/
