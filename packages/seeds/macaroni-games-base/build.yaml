@@ -6,6 +6,9 @@ prelude:
   luet i
   toolchain/desktop2
   toolchain/base-tools
+  toolchain/base-xorg
+  toolchain/base-xorg2
+  toolchain/fonts
   toolchain/base-video
   toolchain/base-audio
   toolchain/base-gtk
