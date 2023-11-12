@@ -5,6 +5,7 @@ prelude:
   luet repo update &&
   luet i
   toolchain/desktop2
+  toolchain/base-tools
   toolchain/base-video
   toolchain/base-audio
   toolchain/base-gtk
