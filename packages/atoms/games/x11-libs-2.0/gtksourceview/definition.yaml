@@ -1,0 +1,39 @@
+name: gtksourceview
+version: 2.10.5
+category: x11-libs-2.0
+use_flags:
+- -test
+- prefix
+requires:
+- name: glib
+  version: '>=0'
+  category: dev-libs-2
+- name: libxml2
+  version: '>=0'
+  category: dev-libs-2
+- name: gtk+
+  version: '>=0'
+  category: x11-libs-2
+annotations:
+  subsets:
+    rules:
+      devel:
+      - ^/usr/include/
+      portage:
+      - ^/var/db/pkg/
+description: A text widget implementing syntax highlighting and other features
+uri:
+- https://www.gnome.org/
+license: GPL-2+ LGPL-2.1+
+labels:
+  DEPEND: '>=x11-libs/gtk+-2.12:2 >=dev-libs/libxml2-2.5:2 >=dev-libs/glib-2.62.2:2
+    dev-util/gtk-doc-am >=dev-util/intltool-0.40 >=sys-devel/gettext-0.17 virtual/pkgconfig
+    >=app-portage/elt-patches-20170815 dev-util/desktop-file-utils x11-misc/shared-mime-info
+    test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )'
+  IUSE: test
+  RDEPEND: '>=x11-libs/gtk+-2.12:2 >=dev-libs/libxml2-2.5:2 >=dev-libs/glib-2.62.2:2'
+  emerge.packages: x11-libs/gtksourceview:2.0
+  kit: gnome-kit
+  original.package.name: x11-libs/gtksourceview
+  original.package.slot: "2.0"
+  original.package.version: 2.10.5-r3
