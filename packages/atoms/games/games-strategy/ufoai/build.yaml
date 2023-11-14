@@ -1,4 +1,9 @@
 prelude:
+# Temporary patch with fix to std=c++14
+- >-
+  cp ufoai-2.5.0_p20180603.ebuild /var/git/meta-repo/kits/games-kit/games-strategy/ufoai/ &&
+  mkdir -p /etc/portage/patches/games-strategy/ufoai/ &&
+  cp -vf patches/ /etc/portage/patches/games-strategy/ufoai/
 - |-
   export FEATURES="-sandbox -usersandbox -ipc-sandbox -pid-sandbox -network-sandbox" && \
   export JOBS={{ ( index .Values.labels "jobs" ) | default "3" }} && \
