@@ -1,9 +1,7 @@
 name: wesnoth
-version: 1.14.7+1
+version: 1.16.10
 category: games-strategy
 use_flags:
-- -fribidi
-- -libressl
 - dbus
 - dedicated
 - server
@@ -43,4 +41,4 @@ labels:
   kit: games-kit
   original.package.name: games-strategy/wesnoth
   original.package.slot: "0"
-  original.package.version: 1.14.7
+  original.package.version: 1.16.10

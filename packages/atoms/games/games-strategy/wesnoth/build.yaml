@@ -1,7 +1,11 @@
 prelude:
 # Temporary fix
 - >-
-  sed -e 's/.*boost.*/\tdev-libs\/boost/g' -i /var/git/meta-repo/kits/games-kit/games-strategy/wesnoth/wesnoth-1.14.7.ebuild
+  cp wesnoth-1.16.10.ebuild /var/git/meta-repo/kits/games-kit/games-strategy/wesnoth/ &&
+  cp files/* /var/git/meta-repo/kits/games-kit/games-strategy/wesnoth/ &&
+  cd /var/git/meta-repo/kits/games-kit/games-strategy/wesnoth/ &&
+  ebuild wesnoth-1.16.10.ebuild digest &&
+  cd -
 - |-
   export FEATURES="-sandbox -usersandbox -ipc-sandbox -pid-sandbox -network-sandbox" && \
   export JOBS={{ ( index .Values.labels "jobs" ) | default "3" }} && \
