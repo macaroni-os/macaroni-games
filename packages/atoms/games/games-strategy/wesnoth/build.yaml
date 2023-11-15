@@ -2,7 +2,7 @@ prelude:
 # Temporary fix
 - >-
   cp wesnoth-1.16.10.ebuild /var/git/meta-repo/kits/games-kit/games-strategy/wesnoth/ &&
-  cp files/* /var/git/meta-repo/kits/games-kit/games-strategy/wesnoth/ &&
+  cp -vf files/* /var/git/meta-repo/kits/games-kit/games-strategy/wesnoth/files/ &&
   cd /var/git/meta-repo/kits/games-kit/games-strategy/wesnoth/ &&
   ebuild wesnoth-1.16.10.ebuild digest &&
   cd -
