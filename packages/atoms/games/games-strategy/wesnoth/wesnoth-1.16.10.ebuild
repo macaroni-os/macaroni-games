@@ -99,7 +99,7 @@ src_install() {
 	local DOCS=( README.md changelog.md )
 	cmake_src_install
 	if use dedicated || use server ; then
-		rmdir "${ED}"/run{/wesnothd,} || die
+		#rmdir "${ED}"/run{/wesnothd,} || die
 		newinitd "${FILESDIR}"/wesnothd.rc-r1 wesnothd
 	fi
 }
