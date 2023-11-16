@@ -3,6 +3,7 @@ prelude:
   export LUET_YES=true &&
   export LUET_NOLOCK=true &&
   luet repo update &&
+  luet upgrade &&
   luet i
   toolchain/desktop2
   toolchain/base-tools
@@ -17,7 +18,10 @@ prelude:
   toolchain/base-qt2
   toolchain/base-gnome
   toolchain/base-gnome2
-  toolchain/base-multimedia3 &&
+  toolchain/base-multimedia3
+  dev-dotnet/libgdiplus
+  dev-lang/mono
+  &&
   luet cleanup --purge-repos &&
   build-docbook-catalog &&
   macaronictl env-update
