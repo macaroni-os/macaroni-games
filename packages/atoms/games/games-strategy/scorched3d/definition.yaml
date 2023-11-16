@@ -1,5 +1,5 @@
 name: scorched3d
-version: "44"
+version: 44+1
 category: games-strategy
 use_flags:
 - -dedicated
