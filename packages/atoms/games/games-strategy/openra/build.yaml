@@ -24,6 +24,6 @@ excludes:
 - ^/var/cache/portage/
 - ^/var/git/
 requires:
-- name: mono
+- name: macaroni-games-base
   version: '>=0'
-  category: dev-lang
+  category: seed
