@@ -7,6 +7,7 @@ prelude:
   luet i
   toolchain/desktop2
   toolchain/base-tools
+  toolchain/base-tools2
   toolchain/base-xorg
   toolchain/base-xorg2
   toolchain/fonts
