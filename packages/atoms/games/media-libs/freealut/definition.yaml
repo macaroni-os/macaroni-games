@@ -1,0 +1,29 @@
+name: freealut
+version: 1.1.0
+category: media-libs
+requires:
+- name: openal
+  version: '>=0'
+  category: media-libs
+annotations:
+  subsets:
+    rules:
+      devel:
+      - ^/usr/include/
+      portage:
+      - ^/var/db/pkg/
+description: The OpenAL Utility Toolkit
+uri:
+- https://www.openal.org/
+license: LGPL-2
+labels:
+  BDEPEND: '>=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 ||
+    ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69
+    >=sys-devel/libtool-2.4'
+  DEPEND: '>=media-libs/openal-1.15.1'
+  RDEPEND: '>=media-libs/openal-1.15.1'
+  emerge.packages: media-libs/freealut
+  kit: geaaru-kit
+  original.package.name: media-libs/freealut
+  original.package.slot: "0"
+  original.package.version: 1.1.0
