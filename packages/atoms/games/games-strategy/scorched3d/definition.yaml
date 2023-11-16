@@ -1,0 +1,68 @@
+name: scorched3d
+version: "44"
+category: games-strategy
+use_flags:
+- -dedicated
+- mysql
+requires:
+- name: dejavu
+  version: '>=0'
+  category: media-fonts
+- name: freealut
+  version: '>=0'
+  category: media-libs
+- name: freetype
+  version: '>=0'
+  category: media-libs-2
+- name: glew
+  version: '>=0'
+  category: media-libs
+- name: libvorbis
+  version: '>=0'
+  category: media-libs
+- name: sdl-net
+  version: '>=0'
+  category: media-libs
+- name: fftw
+  version: '>=0'
+  category: sci-libs-3.0
+- name: jpeg
+  version: '>=0'
+  category: virtual
+- name: mysql
+  version: '>=0'
+  category: virtual
+- name: wxGTK
+  version: '>=0'
+  category: x11-libs-3.0-gtk3
+annotations:
+  subsets:
+    rules:
+      devel:
+      - ^/usr/include/
+      portage:
+      - ^/var/db/pkg/
+description: Multi-player tank battle in 3D (OpenGL)
+uri:
+- http://www.scorched3d.co.uk/
+license: GPL-2
+labels:
+  BDEPEND: '!dedicated? ( virtual/pkgconfig ) >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3
+    || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69
+    >=sys-devel/libtool-2.4'
+  DEPEND: dev-libs/expat media-fonts/dejavu media-libs/libpng:0= media-libs/libsdl[video]
+    media-libs/sdl-net sys-libs/zlib virtual/jpeg:0 !dedicated? ( virtual/opengl virtual/glu
+    media-libs/glew:0= media-libs/libogg media-libs/libvorbis media-libs/openal media-libs/freealut
+    x11-libs/wxGTK:3.0-gtk3[X] media-libs/freetype:2 sci-libs/fftw:3.0= ) mysql? (
+    virtual/mysql )
+  IUSE: dedicated mysql
+  RDEPEND: dev-libs/expat media-fonts/dejavu media-libs/libpng:0= media-libs/libsdl[video]
+    media-libs/sdl-net sys-libs/zlib virtual/jpeg:0 !dedicated? ( virtual/opengl virtual/glu
+    media-libs/glew:0= media-libs/libogg media-libs/libvorbis media-libs/openal media-libs/freealut
+    x11-libs/wxGTK:3.0-gtk3[X] media-libs/freetype:2 sci-libs/fftw:3.0= ) mysql? (
+    virtual/mysql )
+  emerge.packages: games-strategy/scorched3d
+  kit: geaaru-kit
+  original.package.name: games-strategy/scorched3d
+  original.package.slot: "0"
+  original.package.version: "44"
