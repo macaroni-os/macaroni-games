@@ -27,6 +27,3 @@ requires:
 - name: macaroni-games-base
   version: '>=0'
   category: seed
-- name: nasm
-  version: '>=0'
-  category: dev-lang
