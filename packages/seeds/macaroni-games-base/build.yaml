@@ -22,6 +22,8 @@ prelude:
   toolchain/base-multimedia3
   dev-dotnet/libgdiplus
   dev-lang/mono
+  dev-db-6/mariadb
+  dev-db/mariadb-connector-c
   &&
   luet cleanup --purge-repos &&
   build-docbook-catalog &&
