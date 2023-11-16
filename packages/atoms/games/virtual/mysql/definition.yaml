@@ -1,0 +1,28 @@
+name: mysql
+version: "5.6"
+category: virtual
+requires:
+- name: mariadb
+  version: '>=0'
+  category: dev-db-6
+annotations:
+  subsets:
+    rules:
+      devel:
+      - ^/usr/include/
+      portage:
+      - ^/var/db/pkg/
+description: Virtual for MySQL database server
+uri:
+- ""
+labels:
+  IUSE: embedded +server static
+  RDEPEND: '|| ( >=dev-db/mariadb-10.0[embedded(-)?,server?,static?] >=dev-db/mysql-5.6[embedded(-)?,server?,static?]
+    dev-db/mysql-community >=dev-db/percona-server-5.6[embedded(-)?,server?,static?]
+    dev-db/mariadb-galera[embedded(-)?,server?,static?] >=dev-db/mysql-cluster-7.3[embedded(-)?,server?,static?]
+    )'
+  emerge.packages: virtual/mysql
+  kit: core-server-kit
+  original.package.name: virtual/mysql
+  original.package.slot: "0"
+  original.package.version: 5.6-r13
