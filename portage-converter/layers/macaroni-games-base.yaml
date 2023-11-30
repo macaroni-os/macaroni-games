@@ -4,6 +4,8 @@ layer:
 packages:
   - dev-util/gtk-doc-am
   - dev-lang/mono
+  - dev-lang/nasm
+  - x11-libs/wxGTK:3.0-gtk3
   - dev-dotnet/libgdiplus
   - app-accessibility/at-spi2-atk:2
   - app-accessibility/at-spi2-core:2
