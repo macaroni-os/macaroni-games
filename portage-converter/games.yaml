@@ -192,6 +192,19 @@ artefacts:
     - games-emulation/advancemame
     - games-emulation/advancescan
 
+- tree: packages/atoms/games
+  uses:
+    disabled:
+      - debug
+      - fluidsynth
+      - unsupported
+  packages:
+    - games-engines/scummvm
+
+- tree: packages/atoms/games
+  packages:
+    - games-rpg/bass
+
 # TODO: move this in macaroni-funtoo
 # net-misc/geoipupdate
 - tree: packages/atoms/games
