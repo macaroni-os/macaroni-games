@@ -2,9 +2,9 @@ name: scummvm
 version: 2.0.0
 category: games-engines
 use_flags:
-- -alsa
 - -fluidsynth
 - aac
+- alsa
 - flac
 - jpeg
 - mp3
@@ -17,6 +17,9 @@ use_flags:
 - x86
 - zlib
 requires:
+- name: alsa-lib
+  version: '>=0'
+  category: media-libs
 - name: faad2
   version: '>=0'
   category: media-libs
