@@ -7,7 +7,9 @@ env:
 package_dir: /{{ .Values.name }}
 prelude:
 - >-
+  anise repo update &&
   anise rm meta-geaaru-kit -y &&
+  anise cleanup --purge-repos &&
   cp geaaru-kit /etc/portage/repos.conf/ &&
   mkdir -p /{{ .Values.name }}/ &&
   eval 'emerge --sync || true' &&
