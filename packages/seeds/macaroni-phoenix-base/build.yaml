@@ -13,6 +13,7 @@ prelude:
   toolchain/base-extra
   toolchain/base-python
   toolchain/base-tools
+  toolchain/base-gtk
   toolchain/base-multimedia
   toolchain/base-multimedia2
   toolchain/release
