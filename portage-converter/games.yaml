@@ -202,6 +202,13 @@ artefacts:
     - games-engines/scummvm
 
 - tree: packages/atoms/games
+  uses:
+    disabled:
+      - mad
+  packages:
+    - games-engines/scummvm-tools
+
+- tree: packages/atoms/games
   packages:
     - games-rpg/bass
 
@@ -273,6 +280,7 @@ reposcan_contraints:
     - <net-libs/nodejs-15.0
 
     - dev-lang/ruby:3.1
+    - x11-libs/wxGTK:3.0-gtk3
 
 reposcan_disabled_use_flags:
   - build
