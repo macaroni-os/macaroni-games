@@ -1,0 +1,50 @@
+name: scummvm-tools
+version: 2.7.0
+category: games-engines
+use_flags:
+- -mad
+- flac
+- iconv
+- png
+- vorbis
+requires:
+- name: boost
+  version: '>=0'
+  category: dev-libs
+- name: flac
+  version: '>=0'
+  category: media-libs
+- name: freetype
+  version: '>=0'
+  category: media-libs-2
+- name: libvorbis
+  version: '>=0'
+  category: media-libs
+- name: libiconv
+  version: '>=0'
+  category: virtual
+annotations:
+  subsets:
+    rules:
+      devel:
+      - ^/usr/include/
+      portage:
+      - ^/var/db/pkg/
+description: utilities for the SCUMM game engine
+uri:
+- http://scummvm.sourceforge.net/
+license: GPL-2+
+labels:
+  DEPEND: dev-libs/boost:= sys-libs/zlib x11-libs/wxGTK:3.0-gtk3 flac? ( media-libs/flac
+    ) iconv? ( virtual/libiconv media-libs/freetype:2 ) mad? ( media-libs/libmad )
+    png? ( media-libs/libpng:0 ) vorbis? ( media-libs/libvorbis ) app-arch/xz-utils
+    virtual/pkgconfig
+  IUSE: flac iconv mad png vorbis
+  RDEPEND: dev-libs/boost:= sys-libs/zlib x11-libs/wxGTK:3.0-gtk3 flac? ( media-libs/flac
+    ) iconv? ( virtual/libiconv media-libs/freetype:2 ) mad? ( media-libs/libmad )
+    png? ( media-libs/libpng:0 ) vorbis? ( media-libs/libvorbis )
+  emerge.packages: games-engines/scummvm-tools
+  kit: geaaru-kit
+  original.package.name: games-engines/scummvm-tools
+  original.package.slot: "0"
+  original.package.version: 2.7.0
