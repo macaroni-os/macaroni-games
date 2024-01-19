@@ -12,6 +12,7 @@ prelude:
   anise cleanup --purge-repos &&
   cp geaaru-kit /etc/portage/repos.conf/ &&
   mkdir -p /{{ .Values.name }}/ &&
+  eval 'rm -rf /var/git/extra-kits/geaaru-kit || true' &&
   eval 'emerge --sync || true' &&
   cd /var/git/extra-kits/geaaru-kit &&
   git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' &&
