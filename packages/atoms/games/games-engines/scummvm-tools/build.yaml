@@ -4,7 +4,7 @@ prelude:
   anise upgrade -y &&
   anise i -y wxGTK eselect-wxwidgets &&
   eval 'eselect wxwidgets set 1 || true' &&
-  anise cleanup &&
+  anise cleanup
 - |-
   export FEATURES="-sandbox -usersandbox -ipc-sandbox -pid-sandbox -network-sandbox" && \
   export JOBS={{ ( index .Values.labels "jobs" ) | default "3" }} && \

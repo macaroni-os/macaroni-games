@@ -1,5 +1,5 @@
 name: scummvm-tools
-version: 2.7.0+3
+version: 2.7.0+4
 category: games-engines
 use_flags:
 - -mad
