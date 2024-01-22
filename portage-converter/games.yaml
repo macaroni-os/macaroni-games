@@ -224,6 +224,14 @@ artefacts:
     - virtual/mysql
 
 
+- tree: packages/atoms/games
+  uses:
+    disabled:
+      - doc
+      - luajit
+  packages:
+    - games-engines/solarus
+
 include_layers:
 - layers/macaroni-games-base.yaml
 
