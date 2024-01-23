@@ -2,9 +2,9 @@ prelude:
 - >-
   export LUET_YES=true &&
   export LUET_NOLOCK=true &&
-  luet repo update &&
-  luet upgrade &&
-  luet i
+  anise repo update &&
+  anise upgrade &&
+  anise i
   toolchain/desktop2
   toolchain/base-tools
   toolchain/base-tools2
@@ -25,7 +25,10 @@ prelude:
   dev-db-6/mariadb
   dev-db/mariadb-connector-c
   &&
-  luet cleanup --purge-repos &&
+  anise i repository/macaroni-games-dev &&
+  anise repo update &&
+  anise upgrade &&
+  anise cleanup --purge-repos &&
   build-docbook-catalog &&
   macaronictl env-update
 requires:
