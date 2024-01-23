@@ -1,5 +1,5 @@
 name: solarus
-version: 1.6.5+2
+version: 1.6.5+3
 category: games-engines
 use_flags:
 - -doc
