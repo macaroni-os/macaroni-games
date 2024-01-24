@@ -1,0 +1,20 @@
+name: premake
+version: 5.0.0
+category: dev-util-5
+annotations:
+  subsets:
+    rules:
+      devel:
+      - ^/usr/include/
+      portage:
+      - ^/var/db/pkg/
+description: A makefile generation tool
+uri:
+- https://premake.github.io
+license: BSD
+labels:
+  emerge.packages: dev-util/premake:5
+  kit: geaaru-kit
+  original.package.name: dev-util/premake
+  original.package.slot: "5"
+  original.package.version: 5.0.0_beta2
