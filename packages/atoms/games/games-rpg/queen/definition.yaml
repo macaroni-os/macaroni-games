@@ -1,0 +1,41 @@
+name: queen
+version: "1"
+category: games-rpg
+use_flags:
+- l10n_de
+- l10n_en
+- l10n_fr
+- l10n_he
+- l10n_it
+- mp3
+requires:
+- name: scummvm
+  version: '>=0'
+  category: games-engines
+annotations:
+  subsets:
+    rules:
+      devel:
+      - ^/usr/include/
+      portage:
+      - ^/var/db/pkg/
+description: Flight of the Amazon Queen - 2D point-and-click adventure game set in
+  the 1940s
+uri:
+- http://scummvm.sourceforge.net/
+license: queen
+labels:
+  DEPEND: l10n_de? ( games-engines/scummvm[vorbis] ) l10n_en? ( games-engines/scummvm[mp3?]
+    ) l10n_fr? ( games-engines/scummvm[vorbis] ) l10n_he? ( games-engines/scummvm[vorbis]
+    ) l10n_it? ( games-engines/scummvm[vorbis] ) l10n_de? ( app-arch/unzip ) l10n_en?
+    ( mp3? ( app-arch/unzip ) ) l10n_fr? ( app-arch/unzip ) l10n_he? ( app-arch/unzip
+    ) l10n_it? ( app-arch/unzip )
+  IUSE: mp3 l10n_de +l10n_en l10n_fr l10n_he l10n_it
+  RDEPEND: l10n_de? ( games-engines/scummvm[vorbis] ) l10n_en? ( games-engines/scummvm[mp3?]
+    ) l10n_fr? ( games-engines/scummvm[vorbis] ) l10n_he? ( games-engines/scummvm[vorbis]
+    ) l10n_it? ( games-engines/scummvm[vorbis] )
+  emerge.packages: games-rpg/queen
+  kit: games-kit
+  original.package.name: games-rpg/queen
+  original.package.slot: "0"
+  original.package.version: 1-r1
