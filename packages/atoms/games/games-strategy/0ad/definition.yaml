@@ -1,5 +1,5 @@
 name: 0ad
-version: 0.0.26+3
+version: 0.0.26+4
 category: games-strategy
 use_flags:
 - -test
