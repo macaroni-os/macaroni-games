@@ -3,7 +3,7 @@ prelude:
   anise repo update &&
   anise i wxGTK eselect-wxwidgets -y &&
   anise cleanup &&
-  sed -i '/--with-system-nvtt/d' '/--with-system-miniupnpc/d' '/--collada/d'
+  sed -i -e '/--with-system-nvtt/d' -e '/--with-system-miniupnpc/d' -e '/--collada/d'
   /var/git/extra-kits/geaaru-kit/games-strategy/0ad/0ad-0.0.26_alpha.ebuild
 - |-
   export FEATURES="-sandbox -usersandbox -ipc-sandbox -pid-sandbox -network-sandbox" && \
