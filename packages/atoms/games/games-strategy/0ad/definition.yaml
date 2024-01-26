@@ -1,10 +1,11 @@
 name: 0ad
-version: 0.0.26+4
+version: 0.0.26+5
 category: games-strategy
 use_flags:
 - -test
 - editor
 - lobby
+- nvtt
 requires:
 - name: boost
   version: '>=0'
@@ -21,9 +22,6 @@ requires:
 - name: nspr
   version: '>=0'
   category: dev-libs
-- name: 0ad-data
-  version: '>=0'
-  category: games-strategy
 - name: libpng
   version: '>=0'
   category: media-libs
@@ -83,4 +81,4 @@ labels:
   kit: geaaru-kit
   original.package.name: games-strategy/0ad
   original.package.slot: "0"
-  original.package.version: 0.0.26_alpha
+  original.package.version: 0.0.26_alpha_20240127
