@@ -24,6 +24,6 @@ excludes:
 - ^/var/cache/portage/
 - ^/var/git/
 requires:
-- name: 0ad-data
+- name: macaroni-games-base
   version: '>=0'
-  category: games-strategy
+  category: seed

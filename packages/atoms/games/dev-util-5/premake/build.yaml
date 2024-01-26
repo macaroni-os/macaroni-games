@@ -24,6 +24,6 @@ excludes:
 - ^/var/cache/portage/
 - ^/var/git/
 requires:
-- name: macaroni-games-base
+- name: miniupnpc
   version: '>=0'
-  category: seed
+  category: net-libs
