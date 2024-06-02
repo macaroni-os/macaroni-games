@@ -1,7 +1,7 @@
 prelude:
 # Temporary fix
 - >-
-  cp -vf files/* /var/git/meta-repo/kits/games-kit/games-strategy/wesnoth/files/
+  cp -vrf files /var/git/meta-repo/kits/games-kit/games-strategy/wesnoth/
 - |-
   export FEATURES="-sandbox -usersandbox -ipc-sandbox -pid-sandbox -network-sandbox" && \
   export JOBS={{ ( index .Values.labels "jobs" ) | default "3" }} && \
