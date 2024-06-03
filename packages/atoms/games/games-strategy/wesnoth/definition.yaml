@@ -1,5 +1,5 @@
 name: wesnoth
-version: 1.18.0+2
+version: 1.18.0+3
 category: games-strategy
 use_flags:
 - dbus
