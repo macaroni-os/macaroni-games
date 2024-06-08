@@ -1,5 +1,5 @@
 name: wesnoth
-version: 1.18.0+3
+version: 1.19.0
 category: games-strategy
 use_flags:
 - dbus
@@ -41,4 +41,4 @@ labels:
   kit: geaaru-kit
   original.package.name: games-strategy/wesnoth
   original.package.slot: "0"
-  original.package.version: 1.18.0
+  original.package.version: 1.19.0
