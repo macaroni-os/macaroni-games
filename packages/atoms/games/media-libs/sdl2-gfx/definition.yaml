@@ -1,0 +1,30 @@
+name: sdl2-gfx
+version: 1.0.4
+category: media-libs
+requires:
+- name: libsdl2
+  version: '>=0'
+  category: media-libs
+annotations:
+  subsets:
+    rules:
+      devel:
+      - ^/usr/include/
+      portage:
+      - ^/var/db/pkg/
+description: Graphics drawing primitives library for SDL2
+uri:
+- http://www.ferzkopp.net/joomla/content/view/19/14/ https://www.ferzkopp.net/wordpress/2016/01/02/sdl_gfx-sdl2_gfx/
+license: ZLIB
+labels:
+  BDEPEND: '>=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 ||
+    ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69
+    >=sys-devel/libtool-2.4'
+  DEPEND: media-libs/libsdl2[video]
+  IUSE: doc
+  RDEPEND: media-libs/libsdl2[video]
+  emerge.packages: media-libs/sdl2-gfx
+  kit: media-kit
+  original.package.name: media-libs/sdl2-gfx
+  original.package.slot: "0"
+  original.package.version: 1.0.4
