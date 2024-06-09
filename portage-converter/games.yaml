@@ -258,6 +258,42 @@ artefacts:
   packages:
     - games-rpg/queen
 
+- tree: packages/atoms/games
+  mutations:
+    uses:
+      - qt5
+      - auth
+      - gtk
+      - ipv6
+      - mapimg
+      - modpack
+      - readline
+      - sdl
+      - server
+      - sound
+      - sqlite
+  uses:
+    disabled:
+      - dedicated
+      - aiomodules
+      - mysql
+  packages:
+    - games-strategy/freeciv
+  finalizer:
+    shell:
+      - "/bin/bash"
+      - "-c"
+    install:
+      - >-
+        source /etc/profile &&
+        macaronictl env-update &&
+        whip hook gtk.postinst
+    uninstall:
+      - >-
+        source /etc/profile &&
+        macaronictl env-update &&
+        whip hook gtk.postinst
+
 include_layers:
 - layers/macaroni-games-base.yaml
 
