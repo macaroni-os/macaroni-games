@@ -1,4 +1,3 @@
-#image: "macaronios/phoenix-minimal-devel:latest-amd64"
 image: "macaronios/phoenix-dev-minimal-devel:latest-amd64"
 env:
 - LUET_YES=true
@@ -6,9 +5,9 @@ env:
 - HTTP_TIMEOUT=0
 prelude:
 - >-
-  luet repo update --force &&
-  luet upgrade &&
-  luet i --force
+  anise repo update --force &&
+  anise upgrade &&
+  anise i --force
   toolchain/base
   toolchain/base-extra
   toolchain/base-python
@@ -20,20 +19,19 @@ prelude:
   toolchain/meta-repo
   toolchain/meta-geaaru-kit
   app-admin/whip
-  whip-profiles/macaroni
-  macaroni/whip-catalog
+  sys-apps/whip-catalog
   macaroni/entities-catalog
   macaroni/ctl
   macaroni/skel-phoenix
-  dev-util/pkgs-checker-minimal
-  system/entities
+  dev-util/pkgs-checker
+  app-admin/entities
   system/luet-devkit
   virtual/base
-  utils/jq
-  utils/yq
+  app-misc/jq
+  yq-go
   kernel-5.10/macaroni-lts-sources &&
-  luet miner ri virtual/base &&
-  luet cleanup --purge-repos &&
+  anise miner ri virtual/base &&
+  anise cleanup --purge-repos &&
   eval 'mkdir /tmp || true' &&
   chmod a+rwx /tmp &&
   eselect kernel set 1 &&
@@ -49,7 +47,7 @@ prelude:
   macaronictl env-update &&
   eval 'locale-gen || true' &&
   build-docbook-catalog &&
-  luet cleanup --purge-repos &&
+  anise cleanup --purge-repos &&
   entities merge -s /usr/share/macaroni/entities -a &&
   cd / && rm -rf /luetbuild &&
   mkdir /layer
