@@ -81,14 +81,14 @@ autobump: auto-bump
 repository:
 	mkdir -p $(ROOT_DIR)/repository
 
-repository/mottainai:
-	git clone -b master --single-branch https://github.com/MottainaiCI/repo-stable $(ROOT_DIR)/repository/mottainai
+repository/mark:
+	git clone -b phoenix --single-branch https://github.com/macaroni-os/mark-repo $(ROOT_DIR)/repository/mark
 
 repository/macaroni-commons:
-	git clone -b master --single-branch https://github.com/funtoo/macaroni-commons $(ROOT_DIR)/repository/macaroni-commons
+	git clone -b master --single-branch https://github.com/macaroni-os/macaroni-commons $(ROOT_DIR)/repository/macaroni-commons
 
 repository/macaroni-funtoo:
-	git clone -b phoenix --single-branch https://github.com/funtoo/macaroni-funtoo $(ROOT_DIR)/repository/macaroni-funtoo
+	git clone -b phoenix --single-branch https://github.com/macaroni-os/macaroni-funtoo $(ROOT_DIR)/repository/macaroni-funtoo
 
-validate: repository repository/mottainai repository/macaroni-commons repository/macaroni-funtoo
+validate: repository repository/mark repository/macaroni-commons repository/macaroni-funtoo
 	$(LUET) tree validate --tree $(ROOT_DIR)/repository --tree $(TREE) $(VALIDATE_OPTIONS)
