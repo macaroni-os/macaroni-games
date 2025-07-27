@@ -29,6 +29,8 @@ prelude:
   virtual/base
   app-misc/jq
   yq-go
+  app-misc/yq4
+  anise-portage-converter
   kernel-5.10/macaroni-lts-sources &&
   anise miner ri virtual/base &&
   anise cleanup --purge-repos &&
