@@ -1,5 +1,5 @@
 name: freeciv
-version: 2.6.0
+version: 3.1.5
 category: games-strategy
 use_flags:
 - -dedicated
@@ -76,32 +76,33 @@ uri:
 - http://www.freeciv.org/
 license: GPL-2+
 labels:
-  BDEPEND: virtual/pkgconfig !dedicated? ( x11-base/xorg-proto nls? ( sys-devel/gettext
+  BDEPEND: app-arch/gzip virtual/pkgconfig !dedicated? ( nls? ( sys-devel/gettext
     ) )
-  DEPEND: app-arch/bzip2 app-arch/xz-utils net-misc/curl sys-libs/zlib auth? ( !mysql?
-    ( ( !sqlite? ( dev-db/mysql-connector-c:0= ) ) ) mysql? ( dev-db/mysql-connector-c:0=
-    ) sqlite? ( dev-db/sqlite:3 ) ) dedicated? ( aimodules? ( dev-libs/libltdl:0 )
-    ) !dedicated? ( media-libs/libpng:0 gtk? ( x11-libs/gtk+:2 ) mapimg? ( media-gfx/imagemagick:=
-    ) modpack? ( x11-libs/gtk+:2 ) nls? ( virtual/libintl ) qt5? ( dev-qt/qtcore:5
-    dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) !sdl? ( !gtk? ( x11-libs/gtk+:2 ) ) sdl? (
+  DEPEND: app-arch/bzip2 app-arch/xz-utils net-misc/curl dev-libs/icu:= sys-libs/zlib
+    auth? ( !mysql? ( ( !sqlite? ( dev-db/mysql-connector-c:= ) ) ) mysql? ( dev-db/mysql-connector-c:=
+    ) sqlite? ( dev-db/sqlite:3 ) ) dedicated? ( aimodules? ( dev-libs/libltdl ) )
+    !dedicated? ( media-libs/libpng gtk? ( x11-libs/gtk+:3 ) mapimg? ( media-gfx/imagemagick:=
+    ) modpack? ( x11-libs/gtk+:3 ) nls? ( virtual/libintl ) qt5? ( dev-qt/qtcore:5
+    dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) !sdl? ( !gtk? ( x11-libs/gtk+:3 ) ) sdl? (
     media-libs/libsdl2[video] media-libs/sdl2-gfx media-libs/sdl2-image[png] media-libs/sdl2-ttf
-    ) server? ( aimodules? ( sys-devel/libtool:2 ) ) sound? ( media-libs/libsdl2[sound]
-    media-libs/sdl2-mixer[vorbis] ) ) readline? ( sys-libs/readline:0= ) system-lua?
-    ( >=dev-lang/lua-5.3:= ) dev-util/desktop-file-utils x11-misc/shared-mime-info
+    ) server? ( aimodules? ( dev-build/libtool ) ) sound? ( media-libs/libsdl2[sound]
+    media-libs/sdl2-mixer[vorbis] ) ) readline? ( sys-libs/readline:= ) system-lua?
+    ( lua_single_target_lua5-3? ( dev-lua/lua:5.3 ) ) !dedicated? ( x11-base/xorg-proto
+    ) dev-util/desktop-file-utils x11-misc/shared-mime-info
   IUSE: aimodules auth dedicated +gtk ipv6 mapimg modpack mysql nls qt5 readline sdl
-    +server +sound sqlite system-lua
-  RDEPEND: app-arch/bzip2 app-arch/xz-utils net-misc/curl sys-libs/zlib auth? ( !mysql?
-    ( ( !sqlite? ( dev-db/mysql-connector-c:0= ) ) ) mysql? ( dev-db/mysql-connector-c:0=
-    ) sqlite? ( dev-db/sqlite:3 ) ) dedicated? ( aimodules? ( dev-libs/libltdl:0 )
-    ) !dedicated? ( media-libs/libpng:0 gtk? ( x11-libs/gtk+:2 ) mapimg? ( media-gfx/imagemagick:=
-    ) modpack? ( x11-libs/gtk+:2 ) nls? ( virtual/libintl ) qt5? ( dev-qt/qtcore:5
-    dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) !sdl? ( !gtk? ( x11-libs/gtk+:2 ) ) sdl? (
+    +server +sound sqlite +system-lua +lua_single_target_lua5-3
+  RDEPEND: app-arch/bzip2 app-arch/xz-utils net-misc/curl dev-libs/icu:= sys-libs/zlib
+    auth? ( !mysql? ( ( !sqlite? ( dev-db/mysql-connector-c:= ) ) ) mysql? ( dev-db/mysql-connector-c:=
+    ) sqlite? ( dev-db/sqlite:3 ) ) dedicated? ( aimodules? ( dev-libs/libltdl ) )
+    !dedicated? ( media-libs/libpng gtk? ( x11-libs/gtk+:3 ) mapimg? ( media-gfx/imagemagick:=
+    ) modpack? ( x11-libs/gtk+:3 ) nls? ( virtual/libintl ) qt5? ( dev-qt/qtcore:5
+    dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) !sdl? ( !gtk? ( x11-libs/gtk+:3 ) ) sdl? (
     media-libs/libsdl2[video] media-libs/sdl2-gfx media-libs/sdl2-image[png] media-libs/sdl2-ttf
-    ) server? ( aimodules? ( sys-devel/libtool:2 ) ) sound? ( media-libs/libsdl2[sound]
-    media-libs/sdl2-mixer[vorbis] ) ) readline? ( sys-libs/readline:0= ) system-lua?
-    ( >=dev-lang/lua-5.3:= )
+    ) server? ( aimodules? ( dev-build/libtool ) ) sound? ( media-libs/libsdl2[sound]
+    media-libs/sdl2-mixer[vorbis] ) ) readline? ( sys-libs/readline:= ) system-lua?
+    ( lua_single_target_lua5-3? ( dev-lua/lua:5.3 ) )
   emerge.packages: games-strategy/freeciv
   kit: games-kit
   original.package.name: games-strategy/freeciv
   original.package.slot: "0"
-  original.package.version: 2.6.0-r1
+  original.package.version: 3.1.5
