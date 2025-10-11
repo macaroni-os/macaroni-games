@@ -1,5 +1,5 @@
 name: gloox
-version: 1.0.22
+version: 1.0.22+1
 category: net-libs
 use_flags:
 - -libressl
