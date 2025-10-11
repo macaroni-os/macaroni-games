@@ -1,5 +1,5 @@
 name: openra
-version: "20190314"
+version: 20190314+1
 category: games-strategy
 use_flags:
 - geoip
