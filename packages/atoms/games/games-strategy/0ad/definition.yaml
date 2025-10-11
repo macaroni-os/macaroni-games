@@ -1,5 +1,5 @@
 name: 0ad
-version: 0.0.26+8
+version: 0.0.26+9
 category: games-strategy
 use_flags:
 - -test
@@ -65,20 +65,20 @@ uri:
 license: BitstreamVera CC-BY-SA-3.0 GPL-2 LGPL-2.1 LPPL-1.3c MIT ZLIB
 labels:
   DEPEND: dev-libs/boost:= dev-libs/icu:= dev-libs/libfmt:0= dev-libs/libsodium dev-libs/libxml2
-    dev-libs/nspr ~games-strategy/0ad-data-0.0.26_alpha media-libs/libpng:0 media-libs/libsdl2[X,opengl,video]
-    media-libs/libvorbis media-libs/openal net-libs/enet:1.3 net-libs/miniupnpc:=
-    net-misc/curl sys-libs/zlib virtual/jpeg:0 virtual/opengl x11-libs/libX11 x11-libs/libXcursor
-    editor? ( x11-libs/wxGTK:3.0-gtk3[X,opengl] ) lobby? ( net-libs/gloox ) || ( dev-lang/python:3.8
-    dev-lang/python:3.9 dev-lang/python:3.7 dev-lang/python:3.10 ) >=dev-util/premake-5.0.0_alpha12:5
-    virtual/pkgconfig virtual/rust test? ( dev-lang/perl )
+    dev-libs/nspr media-libs/libpng:0 media-libs/libsdl2[X,opengl,video] media-libs/libvorbis
+    media-libs/openal net-libs/enet:1.3 net-libs/miniupnpc:= net-misc/curl sys-libs/zlib
+    virtual/jpeg:0 virtual/opengl x11-libs/libX11 x11-libs/libXcursor editor? ( x11-libs/wxGTK:3.0-gtk3[X,opengl]
+    ) lobby? ( net-libs/gloox ) || ( dev-lang/python:3.8 dev-lang/python:3.9 dev-lang/python:3.7
+    dev-lang/python:3.10 ) >=dev-util/premake-5.0.0_alpha12:5 virtual/pkgconfig virtual/rust
+    test? ( dev-lang/perl )
   IUSE: editor +lobby nvtt pch test
   RDEPEND: dev-libs/boost:= dev-libs/icu:= dev-libs/libfmt:0= dev-libs/libsodium dev-libs/libxml2
-    dev-libs/nspr ~games-strategy/0ad-data-0.0.26_alpha media-libs/libpng:0 media-libs/libsdl2[X,opengl,video]
-    media-libs/libvorbis media-libs/openal net-libs/enet:1.3 net-libs/miniupnpc:=
-    net-misc/curl sys-libs/zlib virtual/jpeg:0 virtual/opengl x11-libs/libX11 x11-libs/libXcursor
-    editor? ( x11-libs/wxGTK:3.0-gtk3[X,opengl] ) lobby? ( net-libs/gloox )
+    dev-libs/nspr media-libs/libpng:0 media-libs/libsdl2[X,opengl,video] media-libs/libvorbis
+    media-libs/openal net-libs/enet:1.3 net-libs/miniupnpc:= net-misc/curl sys-libs/zlib
+    virtual/jpeg:0 virtual/opengl x11-libs/libX11 x11-libs/libXcursor editor? ( x11-libs/wxGTK:3.0-gtk3[X,opengl]
+    ) lobby? ( net-libs/gloox )
   emerge.packages: games-strategy/0ad
-  kit: geaaru-kit
+  kit: games-kit
   original.package.name: games-strategy/0ad
   original.package.slot: "0"
-  original.package.version: 0.0.26_alpha_20240127
+  original.package.version: 0.0.26_p20240126
