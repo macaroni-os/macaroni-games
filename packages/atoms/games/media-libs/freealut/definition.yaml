@@ -1,5 +1,5 @@
 name: freealut
-version: 1.1.0
+version: 1.1.0+1
 category: media-libs
 requires:
 - name: openal
